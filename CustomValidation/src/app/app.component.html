@@ -1,0 +1,40 @@
+<div class="container">
+    <form (submit)="doRegister(form)" #form="ngForm">
+        <div class="heading">
+            <h1><u>Master detail screen</u></h1>
+        </div>
+        
+        <div >
+            <div class="col-md-3 form-group" >
+                <label for="">Item Id</label>
+                <input type="text" #itemid="ngModel" name="itemid" (keyup)="checkId(itemid)" ngModel required pattern="[0-9]{3,5}" placeholder="Type item id Here" class="form-control">
+    
+            </div>
+            <div class="col-md-3 form-group">
+                <label for="">Name</label>
+                <input type="text" #uname="ngModel" name="uname" ngModel required pattern="[a-z]{3,10}" placeholder="Type Name Here" class="form-control">
+                <span class="alert-info" *ngIf="uname.touched && uname.invalid">Name can't be Blank</span>
+            </div>
+            
+            <div class="col-md-3 form-group">
+                <label for="">Price</label>
+                <input type="range" #uprice="ngModel" name="price" ngModel required pattern="[0-9]{1,6}" min="1" max="1000" step="10">
+                 {{uprice.value}}
+            </div>
+            <div class="form-group">
+                <label for="">Remarks</label>
+                <textarea #uremarks="ngModel" ngModel required pattern="[0-9]{1,6}" name="itemremarks" rows="10" cols="10" maxlength="100" (keyup)="checkchar(uremarks)"></textarea>{{desc}} 
+            </div>
+            <div class="col-md-3 form-group">
+                <label for="">URL</label>
+                <input #url="ngModel" type="email" name="itemurl" ngModel required pattern="[a-z0-9]{10,1000}" placeholder="Type URL Here">
+                <span class="alert-info" *ngIf="url.touched  && url.invalid ">URL can't be Blank</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Register</button>
+            <button class="btn btn-danger" type="button">Delete</button>
+            {{title}}
+        </div>
+    </form>
+</div>
