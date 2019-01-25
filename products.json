@@ -1,0 +1,41 @@
+[
+
+  {
+
+    "name": "arunimavs",
+
+    "description": "desc 2",
+
+    "price": 10,
+
+    "quantity": 5
+
+
+
+  },
+
+  {
+    "name": "anudharavs",
+
+    "description": "desc 3",
+
+    "price": 30,
+
+    "quantity": 1.3
+
+
+  },
+
+  {
+
+    "name": "anupamavs",
+
+    "description": "desc 1",
+
+    "price": 20,
+
+    "quantity": 3.3
+
+  }
+
+]
